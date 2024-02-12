@@ -1,0 +1,36 @@
+---
+const {titulo} = Astro.props
+import Menu from "../pages/Menu.astro";
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{titulo}</title>
+</head>
+
+<body>
+    <Menu />
+    <>
+
+    
+<!-- Contenido de tu página aquí -->
+
+    </style>
+    <slot />
+
+<style>
+    a {
+        text-decoration: none;
+        color: tomato;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+</body>
+</html>

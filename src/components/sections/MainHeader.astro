@@ -1,0 +1,28 @@
+---
+import Home from '../icons/Home.astro'
+import '../../styles/custom.css'
+---
+<header>
+    <h1>
+        Portfolio de JOHN
+    </h1>
+    <nav class="navbar">
+        <a href="/" style="font-size: 8px">
+            <Home class='home-icon' />
+            <Home className='home-icon-2' />
+            Home
+        </a>
+        <a href="/contacto">Contacto</a>
+    </nav>
+</header>
+
+<style>
+    h1 {
+        color: red;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+</style>
