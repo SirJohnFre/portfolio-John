@@ -1,4 +1,9 @@
-<!-- */* formulario de contacto  -->
+---
+import Menu from "../components/Menu.astro";
+import Esquelo from "../layouts/Esquelo.astro";
+
+---
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -6,30 +11,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario Básico</title>
+
+  <style>
+    /* Estilos para el cuerpo */
+    body {
+      display: grid;
+      justify-content: center; /* Centra horizontalmente */
+      align-items: center; /* Centra verticalmente */
+      height: 100vh;
+      width: 100vh;
+      margin: auto; /* Elimina los márgenes predeterminados */
+      padding: 0; /* Elimina los rellenos predeterminados */
+    }
+
+    /* Estilos para el contenedor principal */
+    div {
+      max-width: 400px; /* Tamaño máximo del contenedor principal */
+      width: 90%; /* Tamaño relativo del contenedor principal */
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center; /* Centra horizontalmente el contenido del div */
+    }
+
+    /* Estilos para la imagen */
+    img {
+      max-width: 100%; /* Evita que la imagen desborde del contenedor */
+      height: auto; /* Mantener la proporción de aspecto */
+      margin-bottom: 20px; /* Espacio debajo de la imagen */
+    }
+  </style>
+
 </head>
+<Esquelo/>
 <body>
 
-<h2>Formulario de Contacto</h2>
+<div>
+  <h2>Formulario de Contacto</h2>
+  <img src="ajedrez.jpg" alt="Imagen ajedrez"> 
 
-<form action="/submit" method="post">
-  <label for="nombre">Nombre:</label><br>
-  <input type="text" id="nombre" name="nombre" required><br><br>
+  <form action="/submit" method="post">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br><br>
 
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
 
-  <label for="motivo">Motivo de Contacto:</label><br>
-  <select id="motivo" name="motivo">
-    <option value="consulta">Consulta</option>
-    <option value="comentario">Comentario</option>
-    <option value="sugerencia">Sugerencia</option>
-  </select><br><br>
+    <label for="motivo">Motivo de Contacto:</label><br>
+    <select id="motivo" name="motivo">
+      <option value="consulta">Consulta</option>
+      <option value="comentario">Comentario</option>
+      <option value="sugerencia">Sugerencia</option>
+    </select><br><br>
 
-  <label for="mensaje">Mensaje:</label><br>
-  <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br><br>
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br><br>
 
-  <input type="submit" value="Enviar">
-</form>
+    <input type="submit" value="Enviar">
+  </form>
+</div>
 
 </body>
 </html>

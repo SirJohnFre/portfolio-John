@@ -1,36 +1,34 @@
 ---
-const {titulo} = Astro.props
-import Menu from "../pages/Menu.astro";
+const { titulo } = Astro.props;
+import Menu from "../components/Menu.astro";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{titulo}</title>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fondo de Página Web</title>
+        <style>
+            body {
+                background-image: left
+                    url("public/HD-wallpaper-chess-board-greetings-happy-paris-tumblr-twilight-zen.jpg");
+                background-size:; /* Ajusta la imagen para cubrir todo el fondo */
+                background-repeat: no-repeat; /* Evita la repetición de la imagen */
+                background-image:;
+            }
+            body > img {
+                opacity:;
+            }
+        </style>
+        <Menu />
+    </head>
 
-<body>
-    <Menu />
-    
+    <!-- Contenido de tu página aquí -->
 
-    
-<!-- Contenido de tu página aquí -->
 
-    </style>
-    <slot />
 
-<style>
-    a {
-        text-decoration: none;
-        color: tomato;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-</style>
-
-</body>
+    <!-- Contenido de tu página aquí -->
 </html>
+
+<slot />
